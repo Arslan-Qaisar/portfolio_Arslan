@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(to bottom, #000 0%, #111 100%);
+  color: white;
+}
+
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+/* Navbar styling  */
+nav{
+  position: relative;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  gap: 40px;
+  height: 10vh;
+  font-weight: bolder;
+  font-size: large;
+}
+nav ul li{
+  cursor: pointer;
+
+}
+nav ul li:hover{
+  color: #03AED2;
+}
+
+.sec1{
+  height: 90vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(/bg1.jpg);
+}
+.imge{
+  border: 2px solid white;
+}
+.icnw:hover{
+  color: green;
+}
+.icnf:hover{
+  color: blue;
+}
+.icni:hover{
+  color: red;
+}
+.icnl:hover{
+  color: blue;
+}
+.icng:hover{
+  color: gray;
+}
+
+.aboutmain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.aboutext{  
+  width: 40vw;
+}
+.mytext{
+  overflow: hidden;
+  border-right: 5px solid;
+  width: 100%;
+  font-size: 3.75rem;
+  white-space: nowrap;
+  animation: typing 4s steps(22),cursor .4s step-end infinite alternate;
+}
+@keyframes cursor {
+  50%{ border-color:transparent}
+}
+@keyframes typing {
+  from{width: 0;}
+}
+/* skills section */
+
+.skills{
+  padding-top: 100px;
+}
+.card{
+  height: 15rem;
+  width: 15rem;
+  border: white 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #fdfafa38 0%, #111 100%)
+}
+-rounded-full {
+  border-radius: 50%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+
+/* contact section */
+.contact{
+  padding-top: 100px;
+}
+.form{
+  width: 45vw;
+  margin: 20px;
+  background: linear-gradient(to bottom, #fdfafa38 0%, #111 100%);
+  padding: 20px;
+  margin-left: 50px;
+  border-radius: 10px;
+  border: white 1px solid;
+}
+.name, .mail, .msg{
+  font-size: 20px;
+  font-weight: bold;
+}
+.input{
+  width: 100%;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+}
+.bttn{
+  background: linear-gradient(to bottom, #111 0%, #efe3e3bb 100%);
+  padding: 8px;
+  border-radius: 10px;
+}
+.links{
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* responsive css */
+@media screen and (max-width:900px){
+  .sec1{
+    flex-direction: column;
+  }
+  .center{
+    justify-content: center;
+  }
+  .aboutmain{
+    flex-direction: column;
+  }
+  .aboutext{  
+    width: 80vw;
+    margin: 0;
+    text-align: center;
+  }
+  .row1{
+    flex-wrap: wrap;
+  }
+  .row2{
+    flex-wrap: wrap;
+  }
+  .last{
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  .form{
+    width: 80vw;
+  }
+  .links{
+    margin: auto;
+    padding-top: 50px;
+    width: auto;
+  }
+  .mytext{
+    font-size: 3.0rem;
+    padding-top: 20px;
+  }
+  
+
+}
+@media screen and (max-width:600px){
+  .sec1{
+    height: 70vh;
+  }
+  .mytext{
+    font-size: 35px;
+  }
+  .aboutext{
+    width: 90vw;
+  }
+  .form{
+    margin: 10px;
+    width: 90vw;
+    margin-top: 25px;
+  }
+}
